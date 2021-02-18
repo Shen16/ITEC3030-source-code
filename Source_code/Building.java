@@ -84,7 +84,7 @@ public class Building {
     public Room findRoomOf(SmartThing s){
         Room found = null;
         for (Room r : rooms){
-            if (r.hasThing((SmartThing) s)) 
+            if (r.hasThing((TemperatureSensor) s))
                 found = r;
         }
         return(found);

@@ -42,7 +42,7 @@ public class Main {
         TemperatureSensor o3 = new OmniTempSensorXS3(c,"o3");
         TemperatureSensor o4 = new OmniTempSensorXS3(c,"o4");
         Furnace f = new SaharaFurnaceHL42("f");
-        NumericMeasurementInstrument th =  new ThermosetX19();
+        NumericMeasurementInstrument th = new QuickThermostat();
  
         
         livingRoom.install(o1);
@@ -61,6 +61,8 @@ public class Main {
         
         
         // Part 3 - uncomment to execute
+        th = new ThermosetX19();
+        h.setThermostat(th);
         e = new Scenario(o1,o2,o3,o4);
         e.play();
         
